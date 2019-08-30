@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oq2-yK-JW7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlN-cK-gZ7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="213.5"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="11r-rq-mQN"/>
+                                        </connections>
+                                    </pickerView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgF-dJ-Vds">
+                                        <rect key="frame" x="0.0" y="213.5" width="414" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Image : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUr-0T-8DY">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="71"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGr-Zh-noI">
+                                                <rect key="frame" x="155.5" y="0.0" width="258.5" height="71"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nUr-0T-8DY" firstAttribute="width" secondItem="uGr-Zh-noI" secondAttribute="width" multiplier="0.6" id="Ezq-Ql-Std"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e1O-OK-n8z">
+                                        <rect key="frame" x="0.0" y="284.5" width="414" height="533.5"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UlN-cK-gZ7" firstAttribute="height" secondItem="e1O-OK-n8z" secondAttribute="height" multiplier="0.4" id="4z7-uw-s5S"/>
+                                    <constraint firstItem="UlN-cK-gZ7" firstAttribute="height" secondItem="uGr-Zh-noI" secondAttribute="height" multiplier="3" id="Yxr-iS-ghz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oq2-yK-JW7" secondAttribute="bottom" id="ABH-w9-L2R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oq2-yK-JW7" secondAttribute="trailing" id="OOZ-dn-Pg4"/>
+                            <constraint firstItem="oq2-yK-JW7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PGJ-qO-RSt"/>
+                            <constraint firstItem="oq2-yK-JW7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rLW-ZR-69q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="e1O-OK-n8z" id="gn5-fc-re4"/>
+                        <outlet property="lbImageFileName" destination="uGr-Zh-noI" id="LH4-03-JZP"/>
+                        <outlet property="lbImageView" destination="e1O-OK-n8z" id="TPj-ni-gnj"/>
+                        <outlet property="pickerImage" destination="UlN-cK-gZ7" id="FZH-2K-7lk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

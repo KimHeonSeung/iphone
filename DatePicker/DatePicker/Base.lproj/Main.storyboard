@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SyA-6K-OvH">
+                                <rect key="frame" x="0.0" y="124" width="414" height="658"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 시간 : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEY-Th-ect">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="123.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wrs-XG-xwe">
+                                        <rect key="frame" x="0.0" y="123.5" width="414" height="411"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="588840897.17708504">
+                                            <!--2019-08-30 06:54:57 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="ko_KR"/>
+                                        <connections>
+                                            <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="tJb-MV-Myb"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택 시간 : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbF-UA-vT9">
+                                        <rect key="frame" x="0.0" y="534.5" width="414" height="123.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jEY-Th-ect" firstAttribute="height" secondItem="Wrs-XG-xwe" secondAttribute="height" multiplier="0.3" id="cN9-ze-ds6"/>
+                                    <constraint firstItem="jEY-Th-ect" firstAttribute="height" secondItem="QbF-UA-vT9" secondAttribute="height" id="nqY-BQ-edd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SyA-6K-OvH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="4Ea-4p-pJm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SyA-6K-OvH" secondAttribute="bottom" constant="80" id="UGe-wD-B33"/>
+                            <constraint firstItem="SyA-6K-OvH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yfq-md-Vf1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SyA-6K-OvH" secondAttribute="trailing" id="eHd-iV-dhX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbCurrentTime" destination="jEY-Th-ect" id="RZi-Nc-aAh"/>
+                        <outlet property="lbPickerTime" destination="QbF-UA-vT9" id="BHl-MA-bWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

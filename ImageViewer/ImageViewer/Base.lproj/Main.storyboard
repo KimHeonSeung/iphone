@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2X0-Py-VCl">
+                                <rect key="frame" x="15" y="44" width="384" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Viewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gva-gp-t8G">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="68"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="37"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="err-oi-st1">
+                                        <rect key="frame" x="0.0" y="68" width="384" height="682"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVP-uS-V3s">
+                                        <rect key="frame" x="0.0" y="750" width="384" height="68"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqT-QP-kff">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="68"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <state key="normal" title="이전"/>
+                                                <connections>
+                                                    <action selector="onClickBefore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KmC-xR-UBR"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQH-K1-w8F">
+                                                <rect key="frame" x="128" y="0.0" width="128" height="68"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs1-d6-466">
+                                                <rect key="frame" x="256" y="0.0" width="128" height="68"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <state key="normal" title="다음"/>
+                                                <connections>
+                                                    <action selector="onClickAfter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCE-Ej-2fY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="XqT-QP-kff" firstAttribute="width" secondItem="pQH-K1-w8F" secondAttribute="width" id="4Qd-jg-1q1"/>
+                                            <constraint firstItem="XqT-QP-kff" firstAttribute="width" secondItem="Hs1-d6-466" secondAttribute="width" id="agL-v8-SyQ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gva-gp-t8G" firstAttribute="height" secondItem="LVP-uS-V3s" secondAttribute="height" id="MwC-DO-i2j"/>
+                                    <constraint firstItem="Gva-gp-t8G" firstAttribute="height" secondItem="err-oi-st1" secondAttribute="height" multiplier="0.1" id="xM7-5m-dPK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2X0-Py-VCl" secondAttribute="trailing" constant="15" id="9Xd-en-Kr7"/>
+                            <constraint firstItem="2X0-Py-VCl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="BpB-NA-Nbq"/>
+                            <constraint firstItem="2X0-Py-VCl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F3D-aw-iJo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2X0-Py-VCl" secondAttribute="bottom" id="wWg-jj-gNc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAfter" destination="Hs1-d6-466" id="dKw-L0-Ksq"/>
+                        <outlet property="btnBefore" destination="XqT-QP-kff" id="tTa-0s-8ac"/>
+                        <outlet property="imageViewer" destination="err-oi-st1" id="Acj-ZU-3Hr"/>
+                        <outlet property="lbTotalOf" destination="pQH-K1-w8F" id="RPW-z3-xVV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.jpg" width="400" height="400"/>
+    </resources>
+</document>

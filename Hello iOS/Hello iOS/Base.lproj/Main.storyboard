@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hello_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tQP-Kk-8e8">
+                                <rect key="frame" x="0.0" y="256" width="375" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello ~ iOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFo-w6-0Cm">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbG-Ev-1H7" userLabel="Lb Text">
+                                        <rect key="frame" x="0.0" y="110" width="375" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVe-Cx-Uoh">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWZ-XZ-PCR">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tks-ce-ODK">
+                                                <rect key="frame" x="125" y="0.0" width="250" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BWZ-XZ-PCR" firstAttribute="width" secondItem="Tks-ce-ODK" secondAttribute="width" multiplier="0.5" id="roI-bF-U09"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZE-ee-neh">
+                                        <rect key="frame" x="0.0" y="270" width="375" height="30"/>
+                                        <state key="normal" title="확인"/>
+                                        <connections>
+                                            <action selector="onClickName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MyF-d7-mnN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tFo-w6-0Cm" firstAttribute="height" secondItem="NVe-Cx-Uoh" secondAttribute="height" multiplier="3" id="7el-a2-JE8"/>
+                                    <constraint firstItem="RbG-Ev-1H7" firstAttribute="height" secondItem="NVe-Cx-Uoh" secondAttribute="height" multiplier="3" id="cPJ-r9-6yO"/>
+                                    <constraint firstItem="NVe-Cx-Uoh" firstAttribute="height" secondItem="7ZE-ee-neh" secondAttribute="height" id="xvO-KF-k84"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tQP-Kk-8e8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4rw-N5-Ywf"/>
+                            <constraint firstItem="tQP-Kk-8e8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O1j-4T-9pq"/>
+                            <constraint firstItem="tQP-Kk-8e8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OcC-NP-lh4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tQP-Kk-8e8" secondAttribute="trailing" id="Unb-io-KdB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbMsg" destination="tFo-w6-0Cm" id="Kr1-Rf-cBQ"/>
+                        <outlet property="tfName" destination="Tks-ce-ODK" id="uKc-7p-fsn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

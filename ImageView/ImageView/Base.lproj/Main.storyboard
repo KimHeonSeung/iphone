@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="CYI-40-qnS">
+                                <rect key="frame" x="50" y="244" width="314" height="418"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qVF-NV-Pka">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="331"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="gMZ-Fr-fBA">
+                                        <rect key="frame" x="0.0" y="363" width="314" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMy-Pt-NKH">
+                                                <rect key="frame" x="0.0" y="0.0" width="175" height="55"/>
+                                                <state key="normal" title="이미지 확대"/>
+                                                <connections>
+                                                    <action selector="btnResizeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QDk-6P-Agw"/>
+                                                </connections>
+                                            </button>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjA-Yo-sQL">
+                                                <rect key="frame" x="197" y="0.0" width="119" height="55"/>
+                                                <connections>
+                                                    <action selector="switchImageOnOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="The-Nq-Ija"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="LMy-Pt-NKH" firstAttribute="width" secondItem="TjA-Yo-sQL" secondAttribute="width" multiplier="1.5" id="GEQ-ge-DW3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qVF-NV-Pka" firstAttribute="height" secondItem="gMZ-Fr-fBA" secondAttribute="height" multiplier="6" id="bI8-gV-bNQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CYI-40-qnS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="AD8-v3-cq9"/>
+                            <constraint firstItem="CYI-40-qnS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="AGd-WO-buN"/>
+                            <constraint firstItem="CYI-40-qnS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hxm-aC-SVw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CYI-40-qnS" secondAttribute="trailing" constant="50" id="Xg2-Zl-Vsm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CYI-40-qnS" secondAttribute="bottom" constant="200" id="fAi-Nm-F72"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnResize" destination="LMy-Pt-NKH" id="ONw-H1-kWJ"/>
+                        <outlet property="imgView" destination="qVF-NV-Pka" id="50f-g0-At7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
