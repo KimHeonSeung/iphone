@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     let interval = 1.0
     // 타이머가 설정한 간격대로 실행되는지 확인하기 위한 변수
     var count = 0
+    
+    var alarmTime: String?
 
     @IBOutlet var lbCurrentTime: UILabel!
     @IBOutlet var lbPickerTime: UILabel!
@@ -35,6 +37,8 @@ class ViewController: UIViewController {
         // 데이트 피커에서 선택한 날짜를 formatter의 dateFormate에서 설정한 포맷대로
         // string 메소드를 사용해 문자열로 변환
         lbPickerTime.text = "선택시간 : " + formatter.string(from: datePickerView.date)
+        
+        alarmTime = formatter.string(from: datePickerView.date)
     }
     
     // 타이머가 구동된 후 정해진 시간이 되었을 때 실행할 함수
@@ -53,6 +57,14 @@ class ViewController: UIViewController {
         // 문자열로 변환한 date 값을 "현재시간 : " 이라는 문자열에 추가
         // 그 문자열을 lbCurrentTime의 text에 입력
         lbCurrentTime.text = "현재시간 : " + formatter.string(from: date as Date)
+        
+        let currentTime = formatter.string(from: date as Date)
+        if(alarmTime == currentTime) {
+            let alarmAlert = UIAlertController(title: "알람", message: "설정된 시간입니다 !!", preferredStyle: UIAlertController.Style.alert)
+            let onAction = UIAlertAction(title: "네, 알겠습니다.", style: UIAlertAction.Style.default, handler: nil)
+            alarmAlert.addAction(onAction)
+            present(alarmAlert, animated: true, completion: nil)
+        }
     }
     
 }
